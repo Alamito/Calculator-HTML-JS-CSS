@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#calculator {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.printNumber {
+    height: 20px;
+    width: 80%;
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+.ColumnOne, .ColumnTwo, .ColumnThree {
+    display: flex;
+    gap: 0.3em;
+}
+
+.buttonCalc {
+    margin-bottom: 0.3em;
+    height: 3em;
+    width: 3em;
+}
+
+.buttonCalcOption {
+    margin-bottom: 0.3em;
+    height: 2.5em;
+    width: 1.84em;
+    font-size: 1em;
+}
+
+.bottonResult {
+    height: 2.5em;
+    width: 100%;
+    font-size: 1em;
+}
+
