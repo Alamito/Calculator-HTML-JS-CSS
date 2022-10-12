@@ -44,3 +44,8 @@
     font-size: 1em;
 }
 
+.printNumber {
+    text-align: right;
+    padding: 4px;
+}
+
