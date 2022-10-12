@@ -13,8 +13,8 @@
 }
 
 .printNumber {
-    height: 20px;
-    width: 80%;
+    height: 40px;
+    width: 135px;
     font-size: 1.5em;
     margin-bottom: 0.3em;
 }
@@ -37,9 +37,10 @@
     font-size: 1em;
 }
 
-.bottonResult {
+.buttonResult, .buttonClear {
+    margin-bottom: 0.3em;
     height: 2.5em;
-    width: 100%;
+    width: 48.4%;
     font-size: 1em;
 }
 
