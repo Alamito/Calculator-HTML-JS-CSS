@@ -5,6 +5,7 @@ let operator = '';
 
 console.log("Calculator rodano");
 
+buttonZero = document.querySelector('.zero');
 buttonOne = document.querySelector('.one');
 buttonTwo = document.querySelector('.two');
 buttonThree = document.querySelector('.three');
@@ -38,6 +39,9 @@ input.addEventListener("keydown", function (e) {
     console.log(e.key);
 });
 
+buttonZero.addEventListener('click', () => {
+    storeNumber('0')
+})
 buttonOne.addEventListener('click', () => {
     storeNumber('1')
 })

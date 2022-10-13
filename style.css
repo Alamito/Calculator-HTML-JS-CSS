@@ -19,7 +19,7 @@
     margin-bottom: 0.3em;
 }
 
-.ColumnOne, .ColumnTwo, .ColumnThree {
+.ColumnOne, .ColumnTwo, .ColumnThree, .ColumnFour {
     display: flex;
     gap: 0.3em;
 }
@@ -37,10 +37,15 @@
     font-size: 1em;
 }
 
+.options, .resultAndClear {
+    display: flex;
+    gap: 0.3em;
+}
+
 .buttonResult, .buttonClear {
     margin-bottom: 0.3em;
     height: 2.5em;
-    width: 48.4%;
+    width: 4.1em;
     font-size: 1em;
 }
 
@@ -48,15 +53,4 @@
     text-align: right;
     padding: 4px;
 }
-
-/*input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    /*-webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden 
-}
-
-input[type=number] {
-    -moz-appearance:textfield;
-}*/
 
