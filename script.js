@@ -20,115 +20,57 @@ buttonProduct = document.querySelector('.product');
 buttonDivision = document.querySelector('.division');
 buttonResult = document.querySelector('.buttonResult');
 buttonClear = document.querySelector('.buttonClear');
+input = document.querySelector('.printNumber');
 
 buttonOne.addEventListener('click', () => {
-    //firstNumber += '1';
-    //console.log(firstNumber);
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '1');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '1');
-        printResult(secondNumber);
-    }
+    storeNumber('1')
 })
 buttonTwo.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '2');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '2');
-        printResult(secondNumber);
-    }
+    storeNumber('2')
 })
 buttonThree.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '3');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '3');
-        printResult(secondNumber);
-    }
+    storeNumber('3')
 })
 buttonFour.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '4');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '4');
-        printResult(secondNumber);
-    }
+    storeNumber('4')
 })
 buttonFive.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '5');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '5');
-        printResult(secondNumber);
-    }
+    storeNumber('5')
 })
 buttonSix.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '6');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '6');
-        printResult(secondNumber);
-    }
+    storeNumber('6')
 })
 buttonSeven.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '7');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '7');
-        printResult(secondNumber);
-    }
+    storeNumber('7')
 })
 buttonEight.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '8');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '8');
-        printResult(secondNumber);
-    }
+    storeNumber('8')
 })
 buttonNine.addEventListener('click', () => {
-    if (operator.length === 0) {
-        firstNumber = storeNumber(firstNumber, '9');
-        printResult(firstNumber);
-    } else {
-        secondNumber = storeNumber(secondNumber, '9');
-        printResult(secondNumber);
-    }
+    storeNumber('9')
 })
 buttonSum.addEventListener('click', () => {
+    firstNumber = input.value;
     operator = '+'
     printResult('');
-    //console.log(firstNumber)
 })
 buttonSubtraction.addEventListener('click', () => {
+    firstNumber = input.value;
     operator = '-'
     printResult('');
-    //console.log(firstNumber)
 })
 buttonProduct.addEventListener('click', () => {
+    firstNumber = input.value;
     operator = '*'
     printResult('');
-    //console.log(firstNumber)
 })
 buttonDivision.addEventListener('click', () => {
+    firstNumber = input.value;
     operator = '/'
     printResult('');
-    //console.log(firstNumber)
 })
 buttonResult.addEventListener('click', () => {
-    console.log(firstNumber);
-    console.log(secondNumber);
-
-    console.log(calcResult(firstNumber, secondNumber));
+    secondNumber = input.value;
     firstNumber = calcResult(firstNumber, secondNumber);
     printResult(firstNumber);
 
@@ -145,7 +87,6 @@ buttonClear.addEventListener('click', () => {
 
 function storeNumber(number, button) {
     number += button;
-    //console.log(number);
     return number;
 }
 
@@ -168,7 +109,17 @@ function calcResult(firstNumber, secondNumber) {
 }
 
 function printResult(number) {
-    document.querySelector('.printNumber').value = number;
+    input.value = number;
+}
+
+function storeNumber(number) {
+    if (operator.length === 0) {
+        input.value += number;
+        printResult(input.value);
+    } else {
+        input.value += number;
+        printResult(input.value);
+    }
 }
 
 
