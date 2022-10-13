@@ -22,6 +22,22 @@ buttonResult = document.querySelector('.buttonResult');
 buttonClear = document.querySelector('.buttonClear');
 input = document.querySelector('.printNumber');
 
+function onlynumber(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode(key);
+   //var regex = /^[0-9.,]+$/;
+   var regex = /^[0-9.]+$/;
+   if(!regex.test(key)) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+   }
+}
+
+input.addEventListener("keydown", function (e) {
+    console.log(e.key);
+});
+
 buttonOne.addEventListener('click', () => {
     storeNumber('1')
 })
@@ -49,25 +65,50 @@ buttonEight.addEventListener('click', () => {
 buttonNine.addEventListener('click', () => {
     storeNumber('9')
 })
+
+input.addEventListener('keydown', function (event) {
+    switch (event.key) {
+        case '+':
+            typeOperation('+');
+            break;
+        case '-':
+            typeOperation('-');
+            break;
+        case '*':
+            typeOperation('*');
+            break;
+        case '/':
+            typeOperation('/');
+            break;
+        case 'Enter':
+            secondNumber = input.value;
+            firstNumber = calcResult(firstNumber, secondNumber);
+            printResult(firstNumber);
+            operator = '';
+            secondNumber = '';
+            break;
+        case 'Delete':
+            printResult('');
+            firstNumber = '';
+            operator = '';
+            secondNumber = '';
+            break;
+        default:
+            break;
+    }
+});
+
 buttonSum.addEventListener('click', () => {
-    firstNumber = input.value;
-    operator = '+'
-    printResult('');
+    typeOperation('+');
 })
 buttonSubtraction.addEventListener('click', () => {
-    firstNumber = input.value;
-    operator = '-'
-    printResult('');
+    typeOperation('-');
 })
 buttonProduct.addEventListener('click', () => {
-    firstNumber = input.value;
-    operator = '*'
-    printResult('');
+    typeOperation('*');;
 })
 buttonDivision.addEventListener('click', () => {
-    firstNumber = input.value;
-    operator = '/'
-    printResult('');
+    typeOperation('/');
 })
 buttonResult.addEventListener('click', () => {
     secondNumber = input.value;
@@ -120,6 +161,12 @@ function storeNumber(number) {
         input.value += number;
         printResult(input.value);
     }
+}
+
+function typeOperation(type) {
+    firstNumber = input.value;
+    operator = type
+    printResult('');
 }
 
 
