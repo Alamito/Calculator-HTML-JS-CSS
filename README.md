@@ -18,7 +18,7 @@ Por conseguinte, ao clicar sobre o determinado botão, a cor altera para ainda m
 
 Esses efeitos de claridade ocorrem para todos os outros botões.
 
-As operações da calculadora funcionam baseada na escolha de dois números mais um operador entre eles, assim obtém o resultado (futuramente, será implmentado operações sucessivas entre os números). Fazendo a seguinte operação "12 * 5" a partir do teclado é obtido o resultado esperado igual a 60.
+As operações da calculadora funcionam baseada na escolha de dois números (int ou float) mais um operador entre eles, assim obtém o resultado (futuramente, será implmentado operações sucessivas entre os números). Fazendo a seguinte operação "12 * 5" a partir do teclado é obtido o resultado esperado igual a 60.
 
 ![sixty](https://user-images.githubusercontent.com/102616676/195967455-bc68483d-84e9-4be7-b81d-099e5888b485.png)
 
