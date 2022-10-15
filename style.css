@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #calculator {
@@ -9,48 +10,108 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,124,0,1) 0%, rgba(12,0,255,1) 100%);
 }
 
 .printNumber {
-    height: 40px;
-    width: 135px;
-    font-size: 1.5em;
-    margin-bottom: 0.3em;
-}
-
-.ColumnOne, .ColumnTwo, .ColumnThree, .ColumnFour {
-    display: flex;
-    gap: 0.3em;
-}
-
-.buttonCalc {
-    margin-bottom: 0.3em;
-    height: 3em;
-    width: 3em;
-}
-
-.buttonCalcOption {
-    margin-bottom: 0.3em;
-    height: 2.5em;
-    width: 1.84em;
-    font-size: 1em;
-}
-
-.options, .resultAndClear {
-    display: flex;
-    gap: 0.3em;
-}
-
-.buttonResult, .buttonClear {
-    margin-bottom: 0.3em;
-    height: 2.5em;
-    width: 4.1em;
-    font-size: 1em;
-}
-
-.printNumber {
+    height: auto;
+    width: auto;
+    font-size: 30px;
     text-align: right;
     padding: 4px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 1px;
+}
+
+button {
+    height: auto;
+    width: auto;
+    background: black;
+    color: white;
+    font-size: 27px;
+}
+
+button:hover {
+    background: rgb(73, 73, 73);
+}
+
+button:active {
+    background: rgb(124, 123, 123);
+    transition: all 0.05s ease-in;
+}
+
+.clear, .result {
+    background: #2b2caa;
+}
+
+.clear:hover, .result:hover {
+    background: #4646a7;
+}
+
+.clear:active, .result:active {
+    background: #6a6aa1;
+    transition: all 0.05s ease-in;
+}
+
+.sum, .subtraction, .product, .division {
+    background: #f15a22;
+}
+
+.sum:hover, .subtraction:hover, .product:hover, .division:hover {
+    background: #f5794c;
+}
+
+.sum:active, .subtraction:active, .product:active, .division:active {
+    background: #f3a285;
+    transition: all 0.05s ease-in;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 270px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px;
+    grid-gap: 2px;
+}
+
+.printNumber {
+    grid-column: 1 / span 4;
+}
+
+.sum, .division, .product, .subtraction {
+    grid-row: 2;
+}
+
+.seven, .eight, .nine {
+    grid-row: 3;
+}
+
+.four, .five, .six {
+    grid-row: 4;
+}
+
+.one, .two, .three {
+    grid-row: 5;
+}
+
+.zero {
+    grid-row: 6;
+    grid-column: 2;
+}
+
+.clear {
+    grid-column: 4;
+    grid-row: 3 / span 2;
+}
+
+.result {
+    grid-column: 4;
+    grid-row: 5 / span 6;
 }
 

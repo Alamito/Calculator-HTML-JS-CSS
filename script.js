@@ -19,8 +19,8 @@ buttonSum = document.querySelector('.sum');
 buttonSubtraction = document.querySelector('.subtraction');
 buttonProduct = document.querySelector('.product');
 buttonDivision = document.querySelector('.division');
-buttonResult = document.querySelector('.buttonResult');
-buttonClear = document.querySelector('.buttonClear');
+buttonResult = document.querySelector('.result');
+buttonClear = document.querySelector('.clear');
 input = document.querySelector('.printNumber');
 
 function onlynumber(evt) {

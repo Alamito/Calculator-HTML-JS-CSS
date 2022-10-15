@@ -5,60 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <title>Calculadora</title>
 </head>
 <body>
     <main id="calculator">
-        <div class="input">
+        <div class="grid-container">
             <input class="printNumber" type = "text" onkeypress="return onlynumber();" inputmode="numeric" value="" >
-        </div>
-        <div class="options">
-            <button class="buttonCalcOption sum">+</button>
-            <button class="buttonCalcOption subtraction">-</button>
-            <button class="buttonCalcOption product">*</button>
-            <button class="buttonCalcOption division">/</button>
-        </div>
-        <div class="ColumnOne">
-            <div class="one">
-                <button class="buttonCalc">1</button>
-            </div>
-            <div class="two">
-                <button class="buttonCalc">2</button>
-            </div>
-            <div class="three">
-                <button class="buttonCalc">3</button>
-            </div>
-        </div>
-        <div class="ColumnTwo">
-            <div class="four">
-                <button class="buttonCalc">4</button>
-            </div>
-            <div class="five">
-                <button class="buttonCalc">5</button>
-            </div>
-            <div class="six">
-                <button class="buttonCalc">6</button>
-            </div>
-        </div>
-        <div class="ColumnThree">
-            <div class="seven">
-                <button class="buttonCalc">7</button>
-            </div>
-            <div class="eight">
-                <button class="buttonCalc">8</button>
-            </div>
-            <div class="nine">
-                <button class="buttonCalc">9</button>
-            </div>
-        </div>
-        <div class="ColumnFour">
-            <div class="zero">
-                <button class="buttonCalc">0</button>
-            </div>
-        </div>
-        <div class="resultAndClear">
-            <button class = "buttonResult">=</button>
-            <button class = "buttonClear">C</button>
+            <button class="sum">+</button>
+            <button class="subtraction">–</button>
+            <button class="product">×</button>
+            <button class="division">÷</button>
+            <button class="one">1</button>
+            <button class="two">2</button>
+            <button class="three">3</button>
+            <button class="four">4</button>
+            <button class="five">5</button>
+            <button class="six">6</button>
+            <button class="seven">7</button>
+            <button class="eight">8</button>
+            <button class="nine">9</button>
+            <button class="zero">0</button>
+            <button class = "result">=</button>
+            <button class = "clear">C</button>
         </div>
     </main>
 </body>
