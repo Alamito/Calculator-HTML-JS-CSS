@@ -31,6 +31,7 @@ button {
     background: black;
     color: white;
     font-size: 27px;
+    text-align: center;
 }
 
 button:hover {
@@ -44,6 +45,10 @@ button:active {
 
 .clear, .result {
     background: #2b2caa;
+}
+
+.result {
+    height: calc(100% - 8px);
 }
 
 .clear:hover, .result:hover {
@@ -100,9 +105,8 @@ button:active {
     grid-row: 5;
 }
 
-.zero {
+.sinalNumber, .zero, .point {
     grid-row: 6;
-    grid-column: 2;
 }
 
 .clear {

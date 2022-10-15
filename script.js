@@ -3,7 +3,7 @@ let secondNumber = '';
 let resultNumber = '';
 let operator = '';
 
-console.log("Calculator rodano");
+console.log("calculadora rodando...");
 
 buttonZero = document.querySelector('.zero');
 buttonOne = document.querySelector('.one');
@@ -22,6 +22,8 @@ buttonDivision = document.querySelector('.division');
 buttonResult = document.querySelector('.result');
 buttonClear = document.querySelector('.clear');
 input = document.querySelector('.printNumber');
+buttonSinalNumber = document.querySelector('.sinalNumber');
+buttonPoint = document.querySelector('.point');
 
 function onlynumber(evt) {
    var theEvent = evt || window.event;
@@ -34,40 +36,42 @@ function onlynumber(evt) {
    }
 }
 
-input.addEventListener("keydown", function (e) {
-    console.log(e.key);
-});
-
 buttonZero.addEventListener('click', () => {
     storeNumber('0')
-})
+});
 buttonOne.addEventListener('click', () => {
     storeNumber('1')
-})
+});
 buttonTwo.addEventListener('click', () => {
     storeNumber('2')
-})
+});
 buttonThree.addEventListener('click', () => {
     storeNumber('3')
-})
+});
 buttonFour.addEventListener('click', () => {
     storeNumber('4')
-})
+});
 buttonFive.addEventListener('click', () => {
     storeNumber('5')
-})
+});
 buttonSix.addEventListener('click', () => {
     storeNumber('6')
-})
+});
 buttonSeven.addEventListener('click', () => {
     storeNumber('7')
-})
+});
 buttonEight.addEventListener('click', () => {
     storeNumber('8')
-})
+});
 buttonNine.addEventListener('click', () => {
     storeNumber('9')
-})
+});
+buttonSinalNumber.addEventListener('click', () => {
+    input.value = input.value * -1;
+});
+buttonPoint.addEventListener('click', () => {
+    storeNumber('.')
+});
 
 input.addEventListener('keydown', function (event) {
     switch (event.key) {
